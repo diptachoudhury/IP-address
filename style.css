@@ -1,0 +1,41 @@
+#b1 {position: absolute;
+width: 303px;
+height: 67px;
+left: 41px;
+top: 127px;
+text-decoration: none;
+
+background: #000000;
+border-radius: 10px;}
+
+#b1 {position: absolute;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+ #table{position: absolute;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+
+
+color: #000000;
+} 
+
+#footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 60px;   /* Height of the footer */
+    background: #6cf;
+ }

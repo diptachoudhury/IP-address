@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public IP</title>
+   
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>MY Public IP ADDRESS</h1>
+
+    <table id="table">
+      <tr>
+        <td>Latitude:</td>
+        <td id="Latitude">28.6764</td>
+        
+        <td>City:</td>
+        <td id="City"></td>
+        
+        <td>Organization:</td>
+        <td id="Organization"></td>
+      </tr>
+
+      <tr>
+        <td>Longitude:</td>
+        <td id="Longitude">77.2074</td>
+        
+        <td>Region:</td>
+        <td id="region"></td>
+        
+        <td>Hostname:</td>
+        <td id="Hostname"></td>
+      </tr>
+
+      
+      <tr>
+       
+        <td>
+           <iframe
+           src="https://maps.google.com/maps?q=	28.6764,77.2074&z=15&output=embed" 
+           
+           width="360" 
+           height="270" 
+           frameborder="0" 
+           style="border:0">
+        </iframe>
+        </td>
+      </tr>
+      <tr>
+        <td>Time Zone:</td>
+        <td id="timezone"></td>
+        
+      </tr>
+      <tr>
+        <td>Date and Time::</td>
+        <td id="date"></td>
+      </tr>
+      <tr>
+        <td>Pincode:</td>
+        <td id="pincode">110007</td>
+      </tr>
+      <tr>
+        <td>Message:</td>
+        <td id="message"></td>
+      </tr>
+    </table>
+
+    
+
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script>
+     
+     var date = new Date();
+	 document.getElementById("date").innerHTML = date;
+                    
+        $.getJSON("https://ipinfo.io/122.161.87.155/geo", function(data) {
+             
+            
+            //$("#Latitude").html(data.ip);
+            $("#City").html(data.city);
+            $("#Organization").html(data.org);
+            //$("#Longitude").html(data.ip);
+            $("#region").html(data.region);
+            $("#Hostname").html(data.hostname);
+
+            $("#timezone").html(data.timezone);
+            //$("#date").html(data.hostname);
+            $("#Hostname").html(data.hostname);
+            $("#Hostname").html(data.hostname);
+            
+})
+        </script>
+
+
+  </body>
+</html>
+
+
+
